@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:smooth_quartz"
+    }
+  },
+  "pattern": [
+    "   ",
+    "# #",
+    "###"
+  ],
+  "result": {
+    "item": "drugmod:china_bowl",
+    "count": 1
+  }
+}
