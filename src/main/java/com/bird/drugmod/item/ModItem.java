@@ -15,6 +15,10 @@ public class ModItem {
     public static final RegistryObject<Item> CHINA_BOWL = ITEMS.register("china_bowl",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
 
+    //杵
+    public static final RegistryObject<Item> PESTLE = ITEMS.register("pestle",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
     //注册
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
