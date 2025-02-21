@@ -1,12 +1,39 @@
 package com.bird.drugmod.item.custom;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Vanishable;
+import com.google.common.collect.Multimap;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.item.*;
 
 public class PestleItem extends SwordItem implements Vanishable {
-    public PestleItem(Tier p_43269_, int p_43270_, float p_43271_, Properties p_43272_) {
-        super(p_43269_, p_43270_, p_43271_, p_43272_);
+
+    public PestleItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
+        super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
+    }
+
+    @Override
+    public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
+        super.hurtEnemy(pStack, pTarget, pAttacker);
+
+        System.out.println(pStack);
+        System.out.println(pTarget);
+        System.out.println(pAttacker);
+
+        pTarget.setNoActionTime(100);
+
+        Mob mob = (Mob)pTarget;
+        mob.setNoAi(true);
+        
+
+
+        return true;
+    }
+
+    @Override
+    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot pEquipmentSlot) {
+        return super.getDefaultAttributeModifiers(pEquipmentSlot);
     }
 }

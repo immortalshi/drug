@@ -1,7 +1,10 @@
 package com.bird.drugmod.item;
 
 import com.bird.drugmod.DrugMod;
+import com.bird.drugmod.item.custom.PestleItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,7 +20,7 @@ public class ModItem {
 
     //杵
     public static final RegistryObject<Item> PESTLE = ITEMS.register("pestle",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+            () -> new PestleItem(Tiers.DIAMOND, 8, 1.6f, new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
 
     //注册
     public static void register(IEventBus eventBus) {
