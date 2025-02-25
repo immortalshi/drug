@@ -20,7 +20,7 @@ public class ModItem {
 
     //杵
     public static final RegistryObject<Item> PESTLE = ITEMS.register("pestle",
-            () -> new PestleItem(Tiers.DIAMOND, 8, 1.6f, new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+            () -> new PestleItem(Tiers.DIAMOND, -1, 0.6f, new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
 
     //注册
     public static void register(IEventBus eventBus) {
