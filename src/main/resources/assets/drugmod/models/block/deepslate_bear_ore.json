@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "drugmod:block/deepslate_bear_ore"
+  }
+}

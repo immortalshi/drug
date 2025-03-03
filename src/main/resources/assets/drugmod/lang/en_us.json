@@ -3,6 +3,9 @@
 
   "item.drugmod.china_bowl": "China Bowl",
   "item.drugmod.pestle": "Pestle",
-  "item.drugmod.pestle_bowl": "Pestle Bowl"
+  "item.drugmod.pestle_bowl": "Pestle Bowl",
+
+  "block.drugmod.bear_ore": "Bear Ore",
+  "block.drugmod.deepslate_bear_ore": "Deepslate Bear Ore"
 
 }

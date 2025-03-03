@@ -3,6 +3,8 @@
 
   "item.drugmod.china_bowl": "钵",
   "item.drugmod.pestle": "杵",
-  "item.drugmod.pestle_bowl": "药钵"
+  "item.drugmod.pestle_bowl": "药钵",
 
+  "block.drugmod.bear_ore": "熊矿石",
+  "block.drugmod.deepslate_bear_ore": "深层熊矿石"
 }
