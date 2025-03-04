@@ -1,5 +1,6 @@
 package com.bird.drugmod;
 
+import com.bird.drugmod.block.ModBlocks;
 import com.bird.drugmod.item.ModItem;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -47,6 +48,7 @@ public class DrugMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItem.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
