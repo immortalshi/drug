@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "bear_ingot",
+  "ingredient": {
+    "item": "drugmod:raw_bear"
+  },
+  "result": "drugmod:bear_ingot"
+}

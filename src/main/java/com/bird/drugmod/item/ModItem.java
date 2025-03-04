@@ -1,6 +1,7 @@
 package com.bird.drugmod.item;
 
 import com.bird.drugmod.DrugMod;
+import com.bird.drugmod.item.custom.Detector;
 import com.bird.drugmod.item.custom.PestleItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
@@ -25,6 +26,18 @@ public class ModItem {
     //药钵
     public static final RegistryObject<Item> PESTLE_BOWL = ITEMS.register("pestle_bowl",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
+    //熊原矿
+    public static final RegistryObject<Item> RAW_BEAR = ITEMS.register("raw_bear",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
+    //次元熊锭
+    public static final RegistryObject<Item> BEAR_INGOT = ITEMS.register("bear_ingot",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
+    //探测器
+    public static final RegistryObject<Item> DETECTOR = ITEMS.register("detector",
+            () -> new Detector(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
 
     //注册
     public static void register(IEventBus eventBus) {
