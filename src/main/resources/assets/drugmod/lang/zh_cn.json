@@ -6,8 +6,12 @@
   "item.drugmod.pestle_bowl": "药钵",
   "item.drugmod.raw_bear": "熊原矿",
   "item.drugmod.bear_ingot": "次元熊锭",
+  "item.drugmod.raw_niter": "赤硝原矿",
+  "item.drugmod.niter_dust": "赤硝粉",
   "item.drugmod.detector": "探测器",
 
   "block.drugmod.bear_ore": "熊矿石",
-  "block.drugmod.deepslate_bear_ore": "深层熊矿石"
+  "block.drugmod.deepslate_bear_ore": "深层熊矿石",
+  "block.drugmod.niter_ore": "赤硝矿石",
+  "block.drugmod.deepslate_niter_ore": "深层赤硝矿石"
 }

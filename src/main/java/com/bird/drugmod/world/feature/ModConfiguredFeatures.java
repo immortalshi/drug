@@ -27,9 +27,17 @@ public class ModConfiguredFeatures {
         OreFeatures.STONE_ORE_REPLACEABLES 表示替代的规则是替代：石头、花岗岩、安山岩
         OreFeatures.DEEPSLATE_ORE_REPLACEABLES 替代深渊的石头。
     */
+
+    //熊矿石科
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_BEAR_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.BEAR_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_BEAR_ORE.get().defaultBlockState())
+    ));
+
+    //赤硝矿石科
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_NITER_ORE = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.NITER_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_NITER_ORE.get().defaultBlockState())
     ));
     /*
      * 由于没有末地石的替代规则，这里使用了BlockMatchTest创建了一个匹配方块的规则。
@@ -51,6 +59,9 @@ public class ModConfiguredFeatures {
      * */
     public static final RegistryObject<ConfiguredFeature<?,?>> BEAR_ORE = CONFIGURED_FEATURES.register("bear_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_BEAR_ORES.get(), 8)));
+
+    public static final RegistryObject<ConfiguredFeature<?,?>> NITER_ORE = CONFIGURED_FEATURES.register("niter_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_NITER_ORE.get(), 8)));
 
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURES.register(eventBus);

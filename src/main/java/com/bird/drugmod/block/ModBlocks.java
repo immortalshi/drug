@@ -31,6 +31,16 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.DRUG_TAB);
 
+    //赤硝矿石
+    public static final RegistryObject<Block> NITER_ORE = registerBlock("niter_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.DRUG_TAB);
+
+    //深层赤硝矿石
+    public static final RegistryObject<Block> DEEPSLATE_NITER_ORE = registerBlock("deepslate_niter_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.DRUG_TAB);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registryBlockItem(name, toReturn, tab);

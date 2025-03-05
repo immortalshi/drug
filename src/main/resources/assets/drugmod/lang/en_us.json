@@ -6,10 +6,14 @@
   "item.drugmod.pestle_bowl": "Pestle Bowl",
   "item.drugmod.raw_bear": "Raw Bear",
   "item.drugmod.bear_ingot": "Bear Ingot",
+  "item.drugmod.raw_niter": "Raw Niter",
+  "item.drugmod.niter_dust": "Niter Dust",
   "item.drugmod.detector": "Detector",
 
 
   "block.drugmod.bear_ore": "Bear Ore",
-  "block.drugmod.deepslate_bear_ore": "Deepslate Bear Ore"
+  "block.drugmod.deepslate_bear_ore": "Deepslate Bear Ore",
+  "block.drugmod.niter_ore": "Niter Ore",
+  "block.drugmod.deepslate_niter_ore": "Deepslate Niter Ore"
 
 }

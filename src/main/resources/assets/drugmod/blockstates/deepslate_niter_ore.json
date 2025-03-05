@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "drugmod:block/deepslate_niter_ore"}
+  }
+}

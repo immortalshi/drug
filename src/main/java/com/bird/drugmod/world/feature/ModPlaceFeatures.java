@@ -17,7 +17,11 @@ public class ModPlaceFeatures {
 
     public static RegistryObject<PlacedFeature> BEAR_ORE_PLACED = PLACED_FEATURES.register("bear_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.BEAR_ORE.getHolder().get(),
-                    commonOrePlacement(7, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(32)))));
+                    commonOrePlacement(4, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(32)))));
+
+    public static RegistryObject<PlacedFeature> NITER_ORE_PLACED = PLACED_FEATURES.register("niter_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.NITER_ORE.getHolder().get(),
+                    commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(72)))));
 
     private static List<PlacementModifier> commonOrePlacement(int pCount, PlacementModifier pHeightRange) {
         return orePlacement(CountPlacement.of(pCount), pHeightRange);
