@@ -35,6 +35,14 @@ public class ModItem {
     public static final RegistryObject<Item> BEAR_INGOT = ITEMS.register("bear_ingot",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
 
+    //赤硝原矿
+    public static final RegistryObject<Item> RAW_NITER = ITEMS.register("raw_niter",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
+    //赤霄粉
+    public static final RegistryObject<Item> NITER_DUST = ITEMS.register("niter_dust",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
     //探测器
     public static final RegistryObject<Item> DETECTOR = ITEMS.register("detector",
             () -> new Detector(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));

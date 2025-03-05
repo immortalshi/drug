@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "drugmod:bear_ore",
-    "drugmod:deepslate_bear_ore"
+    "drugmod:deepslate_bear_ore",
+    "drugmod:niter_ore",
+    "drugmod:deepslate_niter_ore"
   ]
 }

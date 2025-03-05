@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "drugmod:niter_ore",
+    "drugmod:deepslate_niter_ore"
+  ]
 }
