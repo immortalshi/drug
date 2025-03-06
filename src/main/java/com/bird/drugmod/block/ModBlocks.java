@@ -1,6 +1,7 @@
 package com.bird.drugmod.block;
 
 import com.bird.drugmod.DrugMod;
+import com.bird.drugmod.block.custom.PestleBowlBlock;
 import com.bird.drugmod.item.ModCreativeModeTab;
 import com.bird.drugmod.item.ModItem;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -40,6 +41,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_NITER_ORE = registerBlock("deepslate_niter_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.DRUG_TAB);
+
+    public static final RegistryObject<Block> PESTLE_BOWL = registerBlock("pestle_bowl",
+            () -> new PestleBowlBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f)),ModCreativeModeTab.DRUG_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
