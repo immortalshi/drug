@@ -24,8 +24,8 @@ public class ModItem {
             () -> new PestleItem(Tiers.DIAMOND, -1, 0.6f, new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
 
     //药钵
-    public static final RegistryObject<Item> PESTLE_BOWL = ITEMS.register("pestle_bowl",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+//    public static final RegistryObject<Item> PESTLE_BOWL = ITEMS.register("pestle_bowl",
+//            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
 
     //熊原矿
     public static final RegistryObject<Item> RAW_BEAR = ITEMS.register("raw_bear",

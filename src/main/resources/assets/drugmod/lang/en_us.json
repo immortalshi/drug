@@ -3,7 +3,7 @@
 
   "item.drugmod.china_bowl": "China Bowl",
   "item.drugmod.pestle": "Pestle",
-  "item.drugmod.pestle_bowl": "Pestle Bowl",
+
   "item.drugmod.raw_bear": "Raw Bear",
   "item.drugmod.bear_ingot": "Bear Ingot",
   "item.drugmod.raw_niter": "Raw Niter",
@@ -11,6 +11,7 @@
   "item.drugmod.detector": "Detector",
 
 
+  "block.drugmod.pestle_bowl": "Pestle Bowl",
   "block.drugmod.bear_ore": "Bear Ore",
   "block.drugmod.deepslate_bear_ore": "Deepslate Bear Ore",
   "block.drugmod.niter_ore": "Niter Ore",

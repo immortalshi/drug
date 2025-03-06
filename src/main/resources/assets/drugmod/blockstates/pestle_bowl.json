@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "drugmod:block/pestle_bowl"
+    },
+    "facing=south": {
+      "model": "drugmod:block/pestle_bowl",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "drugmod:block/pestle_bowl",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "drugmod:block/pestle_bowl",
+      "y": 90
+    }
+  }
+}
