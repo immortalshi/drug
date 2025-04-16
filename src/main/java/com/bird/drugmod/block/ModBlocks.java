@@ -1,6 +1,7 @@
 package com.bird.drugmod.block;
 
 import com.bird.drugmod.DrugMod;
+import com.bird.drugmod.block.custom.DryingRack;
 import com.bird.drugmod.block.custom.PestleBowlBlock;
 import com.bird.drugmod.item.ModCreativeModeTab;
 import com.bird.drugmod.item.ModItem;
@@ -11,7 +12,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -42,8 +42,24 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.DRUG_TAB);
 
+    //药钵
     public static final RegistryObject<Block> PESTLE_BOWL = registerBlock("pestle_bowl",
             () -> new PestleBowlBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f)),ModCreativeModeTab.DRUG_TAB);
+
+    //硫磺石
+    public static final RegistryObject<Block> BRIMSTONE = registerBlock("brimstone",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.DRUG_TAB);
+
+    //保险箱
+    public static final RegistryObject<Block> SAFE = registerBlock("safe",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f)), ModCreativeModeTab.DRUG_TAB);
+
+    public static final RegistryObject<Block> DRYING_RACK = registerBlock("drying_rack",
+            () -> new DryingRack(BlockBehaviour.Properties.of(Material.NETHER_WOOD)
+                    .strength(4f)), ModCreativeModeTab.DRUG_TAB);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

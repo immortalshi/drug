@@ -23,6 +23,14 @@ public class ModPlaceFeatures {
             () -> new PlacedFeature(ModConfiguredFeatures.NITER_ORE.getHolder().get(),
                     commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(72)))));
 
+    public static RegistryObject<PlacedFeature> BRIMSTONE_PLACED = PLACED_FEATURES.register("brimstone_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.BRIMSTONE.getHolder().get(),
+                    commonOrePlacement(7, HeightRangePlacement.uniform(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(80)))));
+
+//    public static RegistryObject<PlacedFeature> BRIMSTONE_PLACED = PLACED_FEATURES.register("brimstone_placed",
+//            () -> new PlacedFeature(ModConfiguredFeatures.BRIMSTONE.getHolder().get(),
+//                    commonOrePlacement(7, HeightRangePlacement.uniform(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(80)))));
+
     private static List<PlacementModifier> commonOrePlacement(int pCount, PlacementModifier pHeightRange) {
         return orePlacement(CountPlacement.of(pCount), pHeightRange);
     }

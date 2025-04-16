@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "brimstone_dust",
+  "ingredient": {
+    "item": "drugmod:brimstone"
+  },
+  "result": "drugmod:brimstone_dust"
+}

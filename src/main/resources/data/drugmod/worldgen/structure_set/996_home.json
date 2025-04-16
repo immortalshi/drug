@@ -1,0 +1,19 @@
+{
+  "structures": [
+    {
+      //上面structure包中的建筑放进来，生成权重为1
+      "structure": "drugmod:996_home",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    //修改这个建筑id，注意两个不同的建筑的salt值不要一样
+    "salt": 1642136993,
+    //两个相同建筑的间隔多大
+    "spacing": 20,
+    //这个值不要比spacing大
+    "separation": 6,
+    //随意向周围扩展生成这种建筑
+    "type": "minecraft:random_spread"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "drugmod:996_home/start_pool",
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+
+      "weight": 1,
+      "element": {
+        //该建筑起始生成的nbt文件，也就是我们第一步中的那个文件名称
+        "location": "drugmod:996_home",
+
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
