@@ -3,6 +3,7 @@ package com.bird.drugmod.block.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -42,7 +43,16 @@ public class PestleBowlBlock extends Block implements EntityBlock, SimpleWaterlo
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
 
         pPlayer.sendSystemMessage(Component.literal("使用了药钵"));
-        return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+
+
+        if (pLevel.isClientSide) {
+            return InteractionResult.SUCCESS;
+        } else {
+            pPlayer.openMenu(pState.getMenuProvider(pLevel, pPos));
+            pPlayer.awardStat(Stats.INTERACT_WITH_CRAFTING_TABLE);
+            return InteractionResult.CONSUME;
+        }
+//        return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
     }
 
     @Nullable

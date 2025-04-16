@@ -8,13 +8,27 @@
   "item.drugmod.bear_ingot": "Bear Ingot",
   "item.drugmod.raw_niter": "Raw Niter",
   "item.drugmod.niter_dust": "Niter Dust",
+  "item.drugmod.brimstone_dust": "Brimstone Dust",
   "item.drugmod.detector": "Detector",
+  "item.drugmod.copper_coin": "Copper Coin",
+  "item.drugmod.iron_coin": "Iron Coin",
+  "item.drugmod.gold_coin": "Gold Coin",
+  "item.drugmod.star_coin": "Star Coin",
 
 
   "block.drugmod.pestle_bowl": "Pestle Bowl",
   "block.drugmod.bear_ore": "Bear Ore",
   "block.drugmod.deepslate_bear_ore": "Deepslate Bear Ore",
   "block.drugmod.niter_ore": "Niter Ore",
-  "block.drugmod.deepslate_niter_ore": "Deepslate Niter Ore"
+  "block.drugmod.deepslate_niter_ore": "Deepslate Niter Ore",
+  "block.drugmod.brimstone": "Brimstone",
+  "block.drugmod.safe": "Safe",
+  "block.drugmod.drying_rack": "Drying Rack",
+
+
+  "entity.minecraft.villager.drugmod.capitalist": "Capitalist",
+  "entity.minecraft.villager.drugmod.drug_master": "Drug Master"
+
+
 
 }

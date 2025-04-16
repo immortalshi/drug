@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "drugmod:bear_ingot"
+    },
+    "title": "这块金属里有熊？",
+    "description": "获得熊头合金",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "drugmod:textures/block/deepslate_tiles.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "drugmod:bear_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

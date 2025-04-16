@@ -1,0 +1,8 @@
+{
+  "replace": false,
+
+  "_comment": "指明我们的建筑会在什么生物群系中生成，比如草原、沙漠、雪原等",
+  "values": [
+    "minecraft:desert"
+  ]
+}

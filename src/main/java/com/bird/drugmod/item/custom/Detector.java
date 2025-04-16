@@ -76,7 +76,7 @@ public class Detector extends Item {
     public boolean isValuableBlock(Block block) {
 //        Block a = ModBlocks.NITER_ORE.get();
 //        System.out.println(block + " : " + ModBlocks.NITER_ORE);
-        return block == Blocks.CHEST || block == ModBlocks.BEAR_ORE.get() || block == ModBlocks.DEEPSLATE_BEAR_ORE.get() || block == ModBlocks.NITER_ORE.get() || block == ModBlocks.DEEPSLATE_NITER_ORE.get();
+        return block == Blocks.CHEST || block == ModBlocks.BEAR_ORE.get() || block == ModBlocks.DEEPSLATE_BEAR_ORE.get() || block == ModBlocks.NITER_ORE.get() || block == ModBlocks.DEEPSLATE_NITER_ORE.get() || block == ModBlocks.BRIMSTONE.get();
 /*        return block == Blocks.ANCIENT_DEBRIS || block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE ||
                 block == Blocks.GOLD_ORE || block == Blocks.COAL_ORE || block == Blocks.EMERALD_ORE || block == Blocks.CHEST || block == ModBlocks.BEAR_ORE.get() || block == ModBlocks.DEEPSLATE_BEAR_ORE.get();*/
 

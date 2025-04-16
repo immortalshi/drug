@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "brimstone_dust",
+  "ingredient": {
+    "item": "drugmod:brimstone"
+  },
+  "result": "drugmod:brimstone_dust"
+}

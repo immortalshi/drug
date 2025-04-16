@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "drugmod:iron_coin"
+    },
+    "title": "5秒真男人！",
+    "description": "食用银币",
+    "frame": "task",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "drugmod:copper_coin",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "drugmod:iron_coin"
+          ]
+        }
+      }
+    }
+  },
+
+  "rewards": {
+    "recipes": [
+      "drugmod:gold_coin"
+    ]
+  }
+}

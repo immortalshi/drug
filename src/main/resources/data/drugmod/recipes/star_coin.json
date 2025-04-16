@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:nether_star"
+    },
+    "X": {
+      "item": "drugmod:bear_ingot"
+    },
+    "Y": {
+      "item": "minecraft:hay_block"
+    }
+  },
+  "pattern": [
+    "Y#Y",
+    "#X#",
+    "Y#Y"
+  ],
+  "result": {
+    "item": "drugmod:star_coin",
+    "count": 1
+  }
+}

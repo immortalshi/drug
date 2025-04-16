@@ -7,11 +7,22 @@
   "item.drugmod.bear_ingot": "次元熊锭",
   "item.drugmod.raw_niter": "赤硝原矿",
   "item.drugmod.niter_dust": "赤硝粉",
+  "item.drugmod.brimstone_dust": "硫磺粉",
   "item.drugmod.detector": "探测器",
+  "item.drugmod.copper_coin": "铜币",
+  "item.drugmod.iron_coin": "银币",
+  "item.drugmod.gold_coin": "金币",
+  "item.drugmod.star_coin": "星星币",
 
   "block.drugmod.pestle_bowl": "药钵",
   "block.drugmod.bear_ore": "熊矿石",
   "block.drugmod.deepslate_bear_ore": "深层熊矿石",
   "block.drugmod.niter_ore": "赤硝矿石",
-  "block.drugmod.deepslate_niter_ore": "深层赤硝矿石"
+  "block.drugmod.deepslate_niter_ore": "深层赤硝矿石",
+  "block.drugmod.brimstone": "硫磺矿石",
+  "block.drugmod.safe": "保险箱",
+  "block.drugmod.drying_rack": "晾药架",
+
+  "entity.minecraft.villager.drugmod.capitalist": "资本家",
+  "entity.minecraft.villager.drugmod.drug_master": "绝命毒师"
 }

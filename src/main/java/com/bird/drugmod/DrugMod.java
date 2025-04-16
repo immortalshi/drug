@@ -1,7 +1,11 @@
 package com.bird.drugmod;
 
 import com.bird.drugmod.block.ModBlocks;
+import com.bird.drugmod.block.entity.ModBlockEntities;
+import com.bird.drugmod.block.renderer.DryingRackRenderer;
 import com.bird.drugmod.item.ModItem;
+import com.bird.drugmod.recipe.ModRecipes;
+import com.bird.drugmod.villager.ModVillagers;
 import com.bird.drugmod.world.feature.ModConfiguredFeatures;
 import com.bird.drugmod.world.feature.ModPlaceFeatures;
 import com.mojang.logging.LogUtils;
@@ -14,6 +18,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -60,6 +65,11 @@ public class DrugMod
         ITEMS.register(modEventBus);
         ModConfiguredFeatures.register(modEventBus);
         ModPlaceFeatures.register(modEventBus);
+        ModVillagers.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+//        ModRecipes.register(modEventBus);
+        ModRecipes.RECIPE_TYPES.register(modEventBus);
+        ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -70,6 +80,9 @@ public class DrugMod
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -90,6 +103,11 @@ public class DrugMod
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        }
+
+        @SubscribeEvent
+        public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.DRYING_RACK.get(), DryingRackRenderer::new);
         }
     }
 }

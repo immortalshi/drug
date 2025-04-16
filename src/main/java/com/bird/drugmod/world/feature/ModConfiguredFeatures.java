@@ -7,6 +7,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -51,6 +52,12 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES,ModBlocks.BEAR_ORE.get().defaultBlockState())
     )); */
 
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_BRIMSTONE = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES,ModBlocks.BRIMSTONE.get().defaultBlockState())
+    ));
+
+
+
     /*
      * 注册描述bear_ore矿物的生成方式，即将我们刚刚写的内容注册。
      * ConfiguredFeature描述世界生成时的结构和地形，例如矿物
@@ -62,6 +69,9 @@ public class ModConfiguredFeatures {
 
     public static final RegistryObject<ConfiguredFeature<?,?>> NITER_ORE = CONFIGURED_FEATURES.register("niter_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_NITER_ORE.get(), 8)));
+
+    public static final RegistryObject<ConfiguredFeature<?,?>> BRIMSTONE = CONFIGURED_FEATURES.register("brimstone",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_BRIMSTONE.get(), 8)));
 
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURES.register(eventBus);
