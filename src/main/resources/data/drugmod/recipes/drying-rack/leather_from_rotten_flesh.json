@@ -1,0 +1,9 @@
+{
+  "type": "drugmod:drying_rack",
+  "cookingtime": 200,
+  "experience": 10.0,
+  "ingredient": {
+    "item": "minecraft:rotten_flesh"
+  },
+  "result": "minecraft:leather"
+}

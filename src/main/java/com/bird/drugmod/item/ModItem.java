@@ -1,6 +1,7 @@
 package com.bird.drugmod.item;
 
 import com.bird.drugmod.DrugMod;
+import com.bird.drugmod.item.custom.BambooCoal;
 import com.bird.drugmod.item.custom.Coin;
 import com.bird.drugmod.item.custom.Detector;
 import com.bird.drugmod.item.custom.PestleItem;
@@ -68,6 +69,22 @@ public class ModItem {
     //星星币
     public static final RegistryObject<Item> STAR_COIN = ITEMS.register("star_coin",
             () -> new Coin(Tiers.NETHERITE, 72, 1.2f, new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB).rarity(Rarity.EPIC)));
+
+    //次元珍珠
+    public static final RegistryObject<Item> DIM_PEARL = ITEMS.register("dim_pearl",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
+    //熊熊球
+    public static final RegistryObject<Item> BEAR_BALL = ITEMS.register("bear_ball",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
+    //筛子
+    public static final RegistryObject<Item> SIEVE = ITEMS.register("sieve",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
+    //竹炭
+    public static final RegistryObject<Item> Bamboo_Coal = ITEMS.register("bamboo_coal",
+            () -> new BambooCoal(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
 
     //注册
     public static void register(IEventBus eventBus) {

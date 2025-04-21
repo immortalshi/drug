@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "bamboo_coal",
+  "ingredient": {
+    "item": "minecraft:bamboo"
+  },
+  "result": "drugmod:bamboo_coal"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "X": {
+      "item": "drugmod:bear_ingot"
+    },
+    "Y": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    "#Y#",
+    "YXY",
+    "#Y#"
+  ],
+  "result": {
+    "item": "drugmod:dim_pearl",
+    "count": 1
+  }
+}

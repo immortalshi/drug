@@ -13,6 +13,10 @@
   "item.drugmod.iron_coin": "银币",
   "item.drugmod.gold_coin": "金币",
   "item.drugmod.star_coin": "星星币",
+  "item.drugmod.dim_pearl": "次元珍珠",
+  "item.drugmod.bear_ball": "熊熊球",
+  "item.drugmod.sieve": "筛子",
+  "item.drugmod.bamboo_coal": "竹炭",
 
   "block.drugmod.pestle_bowl": "药钵",
   "block.drugmod.bear_ore": "熊矿石",
@@ -22,7 +26,11 @@
   "block.drugmod.brimstone": "硫磺矿石",
   "block.drugmod.safe": "保险箱",
   "block.drugmod.drying_rack": "晾药架",
+  "block.drugmod.foot_pad": "垫脚凳",
 
   "entity.minecraft.villager.drugmod.capitalist": "资本家",
-  "entity.minecraft.villager.drugmod.drug_master": "绝命毒师"
+  "entity.minecraft.villager.drugmod.drug_master": "绝命毒师",
+
+  "enchantment.drugmod.remove_slot": "除你武器",
+  "enchantment.drugmod.change_slot": "置换"
 }

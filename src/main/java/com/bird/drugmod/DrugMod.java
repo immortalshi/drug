@@ -3,6 +3,7 @@ package com.bird.drugmod;
 import com.bird.drugmod.block.ModBlocks;
 import com.bird.drugmod.block.entity.ModBlockEntities;
 import com.bird.drugmod.block.renderer.DryingRackRenderer;
+import com.bird.drugmod.enchantment.ModEnchantments;
 import com.bird.drugmod.item.ModItem;
 import com.bird.drugmod.recipe.ModRecipes;
 import com.bird.drugmod.villager.ModVillagers;
@@ -67,6 +68,7 @@ public class DrugMod
         ModPlaceFeatures.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModEnchantments.register(modEventBus);
 //        ModRecipes.register(modEventBus);
         ModRecipes.RECIPE_TYPES.register(modEventBus);
         ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);

@@ -2,6 +2,7 @@ package com.bird.drugmod.block.entity.custom;
 
 import com.bird.drugmod.block.entity.BlockEntityItemHandler;
 import com.bird.drugmod.block.entity.ModBlockEntities;
+import com.bird.drugmod.recipe.ModRecipes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -72,40 +73,40 @@ public class DryingRackEntity extends BlockEntity {
                 return 1;
             }
 
-//            @Override
-//            @NotNull
-//            public ItemStack insertItem(int slot, @NotNull ItemStack stack, boolean simulate) {
-//
-//                Optional<DryingRackRecipe> r = this.getBlockEntity().matchRecipe(stack);
-//                if (r.isPresent()) {
-//                    if (this.getStackInSlot(slot) == ItemStack.EMPTY) {
-//                        this.getBlockEntity().cookingTime[slot] = r.get().cookingTime;
-//                        this.getBlockEntity().cookingProgress[slot] = 0;
-//                        this.getBlockEntity().results[slot] = r.get().result;
-//                        this.getBlockEntity().updateInventory();
-//                        return super.insertItem(slot, stack, simulate);
-//                    }
-//                }
-//                return stack;
-//            }
-//
-//            @Override
-//            @NotNull
-//            public ItemStack extractItem(int slot, int amount, boolean simulate) {
-//                if (this.getBlockEntity().cookingProgress[slot] >= this.getBlockEntity().cookingTime[slot]) {
-//                    if (this.getBlockEntity().results[slot].isEmpty()) {
-//                        this.getBlockEntity().cookingTime[slot] = 0;
-//                        return super.extractItem(slot, amount, simulate);
-//                    }
-//
-//                }
-//                return ItemStack.EMPTY;
-//            }
+            @Override
+            @NotNull
+            public ItemStack insertItem(int slot, @NotNull ItemStack stack, boolean simulate) {
 
-//            @Override
-//            public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-//                return this.getBlockEntity().matchRecipe(stack).isPresent();
-//            }
+                Optional<DryingRackRecipe> r = this.getBlockEntity().matchRecipe(stack);
+                if (r.isPresent()) {
+                    if (this.getStackInSlot(slot) == ItemStack.EMPTY) {
+                        this.getBlockEntity().cookingTime[slot] = r.get().cookingTime;
+                        this.getBlockEntity().cookingProgress[slot] = 0;
+                        this.getBlockEntity().results[slot] = r.get().result;
+                        this.getBlockEntity().updateInventory();
+                        return super.insertItem(slot, stack, simulate);
+                    }
+                }
+                return stack;
+            }
+
+            @Override
+            @NotNull
+            public ItemStack extractItem(int slot, int amount, boolean simulate) {
+                if (this.getBlockEntity().cookingProgress[slot] >= this.getBlockEntity().cookingTime[slot]) {
+                    if (this.getBlockEntity().results[slot].isEmpty()) {
+                        this.getBlockEntity().cookingTime[slot] = 0;
+                        return super.extractItem(slot, amount, simulate);
+                    }
+
+                }
+                return ItemStack.EMPTY;
+            }
+
+            @Override
+            public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+                return this.getBlockEntity().matchRecipe(stack).isPresent();
+            }
 
             @Override
             protected void onContentsChanged(int slot) {
@@ -212,9 +213,9 @@ public class DryingRackEntity extends BlockEntity {
                                     zOff = 0.2f + level.random.nextFloat() * .2f;
                                 }
                             }
-                            level.addParticle(ParticleTypes.DOLPHIN, pos.getX() + level.random.nextDouble() / 16 + xOff,
+                            level.addParticle(ParticleTypes.ELECTRIC_SPARK, pos.getX() + level.random.nextDouble() / 16 + xOff,
                                     pos.getY() - level.random.nextDouble() / 16 + yOff,
-                                    pos.getZ() + level.random.nextDouble() / 16 + zOff, 0, 1f, 0);
+                                    pos.getZ() + level.random.nextDouble() / 16 + zOff, 0, 0.01f, 0);
                         }
                     }
                 } else {
@@ -318,12 +319,12 @@ public class DryingRackEntity extends BlockEntity {
         writeNBT(nbt);
     }
 
-//    public Optional<DryingRackRecipe> matchRecipe(ItemStack itemstack) {
-//        if (this.level != null) {
-//            return level.getRecipeManager().getRecipeFor(ExtraDelightRecipes.DRYING_RACK.get(),
-//                    new SimpleContainer(itemstack), level);
-//        }
-//        return Optional.empty();
-//
-//    }
+    public Optional<DryingRackRecipe> matchRecipe(ItemStack itemstack) {
+        if (this.level != null) {
+            return level.getRecipeManager().getRecipeFor(ModRecipes.DRYING_RACK.get(),
+                    new SimpleContainer(itemstack), level);
+        }
+        return Optional.empty();
+
+    }
 }

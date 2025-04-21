@@ -14,6 +14,10 @@
   "item.drugmod.iron_coin": "Iron Coin",
   "item.drugmod.gold_coin": "Gold Coin",
   "item.drugmod.star_coin": "Star Coin",
+  "item.drugmod.dim_pearl": "Dimensional Pearl",
+  "item.drugmod.bear_ball": "Bear Ball",
+  "item.drugmod.sieve": "Sieve",
+  "item.drugmod.bamboo_coal": "Bamboo Coal",
 
 
   "block.drugmod.pestle_bowl": "Pestle Bowl",
@@ -24,11 +28,13 @@
   "block.drugmod.brimstone": "Brimstone",
   "block.drugmod.safe": "Safe",
   "block.drugmod.drying_rack": "Drying Rack",
+  "block.drugmod.foot_pad": "Foot Pad",
+
 
 
   "entity.minecraft.villager.drugmod.capitalist": "Capitalist",
-  "entity.minecraft.villager.drugmod.drug_master": "Drug Master"
+  "entity.minecraft.villager.drugmod.drug_master": "Drug Master",
 
-
-
+  "enchantment.drugmod.remove_slot": "Remove Slot",
+  "enchantment.drugmod.change_slot": "Change Slot"
 }

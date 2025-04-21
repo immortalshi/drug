@@ -1,4 +1,4 @@
-package com.bird.drugmod.recipe;
+package com.bird.drugmod.block.entity.custom;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

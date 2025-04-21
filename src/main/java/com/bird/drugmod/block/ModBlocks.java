@@ -2,6 +2,7 @@ package com.bird.drugmod.block;
 
 import com.bird.drugmod.DrugMod;
 import com.bird.drugmod.block.custom.DryingRack;
+import com.bird.drugmod.block.custom.FootPad;
 import com.bird.drugmod.block.custom.PestleBowlBlock;
 import com.bird.drugmod.item.ModCreativeModeTab;
 import com.bird.drugmod.item.ModItem;
@@ -44,7 +45,7 @@ public class ModBlocks {
 
     //药钵
     public static final RegistryObject<Block> PESTLE_BOWL = registerBlock("pestle_bowl",
-            () -> new PestleBowlBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f)),ModCreativeModeTab.DRUG_TAB);
+            () -> new PestleBowlBlock(BlockBehaviour.Properties.of(Material.STONE).strength(2f)),ModCreativeModeTab.DRUG_TAB);
 
     //硫磺石
     public static final RegistryObject<Block> BRIMSTONE = registerBlock("brimstone",
@@ -58,7 +59,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DRYING_RACK = registerBlock("drying_rack",
             () -> new DryingRack(BlockBehaviour.Properties.of(Material.NETHER_WOOD)
-                    .strength(4f)), ModCreativeModeTab.DRUG_TAB);
+                    .strength(0.4f).noOcclusion()), ModCreativeModeTab.DRUG_TAB);
+
+    public static final RegistryObject<Block> FootPad = registerBlock("foot_pad",
+            () -> new FootPad(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.8f).lightLevel(s -> 15)), ModCreativeModeTab.DRUG_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "Y": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "XYX",
+    "YYY",
+    "XYX"
+  ],
+  "result": {
+    "item": "drugmod:sieve",
+    "count": 1
+  }
+}
