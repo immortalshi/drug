@@ -33,6 +33,7 @@ public class DryingRackRenderer implements BlockEntityRenderer<DryingRackEntity>
                 ItemStack item = inv.getStackInSlot(i);
 
                 if (!item.isEmpty()) {
+//                    System.out.println("Rendering item123 " + i);
                     BakedModel bakedmodel = itemRenderer.getModel(item, pBlockEntity.getLevel(), null, 0);
                     pPoseStack.pushPose();
 

@@ -1,6 +1,7 @@
-package com.bird.drugmod.recipe;
+package com.bird.drugmod.block.entity.custom;
 
 import ca.weblite.objc.Runtime;
+import com.bird.drugmod.recipe.ModRecipes;
 import net.minecraft.core.NonNullList;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;

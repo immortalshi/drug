@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "drugmod:bear_ball"
+    },
+    "title": "统统抓起来，一个不留",
+    "description": "合成次元球",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "drugmod:bear_ingot",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "drugmod:bear_ball"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

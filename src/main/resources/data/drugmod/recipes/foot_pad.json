@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "Y": {
+      "item": "minecraft:oak_slab"
+    },
+    "X": {
+      "item": "minecraft:oak_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "YYY",
+    "X X"
+  ],
+  "result": {
+    "item": "drugmod:foot_pad",
+    "count": 1
+  }
+}

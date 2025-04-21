@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "drugmod:dim_pearl"
+    },
+    "Y": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " Y ",
+    "YXY",
+    " Y "
+  ],
+  "result": {
+    "item": "drugmod:bear_ball",
+    "count": 1
+  }
+}

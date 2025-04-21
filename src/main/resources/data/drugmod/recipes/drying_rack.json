@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "Y": {
+      "item": "drugmod:sieve"
+    }
+  },
+  "pattern": [
+    "XYX",
+    "XYX",
+    "X X"
+  ],
+  "result": {
+    "item": "drugmod:drying_rack",
+    "count": 1
+  }
+}
