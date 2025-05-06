@@ -2,13 +2,18 @@ package com.bird.drugmod.item.custom;
 
 import com.bird.drugmod.block.ModBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class Detector extends Item {
     public Detector(Properties p_41383_) {
@@ -31,6 +36,7 @@ public class Detector extends Item {
 
                         for(int k = 0; k <= bp.getY() + 1; k++) {
                             Block below = useOnContext.getLevel().getBlockState(bp.below(k)).getBlock();
+//                            BlockEntityType<?> type = below.asItem().getBlockEntityData();
                             if(isValuableBlock(below)) {
                                 outPutBlockMsg(bp.below(k), player, below);
                                 isFound = true;
@@ -64,7 +70,9 @@ public class Detector extends Item {
     }
 
     public void outPutBlockMsg(BlockPos blockPos, Player player, Block below) {
-        player.sendSystemMessage(Component.literal("检测到" + below.asItem().getDescription() + "位于" + "(" +
+        MutableComponent blockName = Component.translatable(below.getDescriptionId());
+//        player.sendSystemMessage(Component.literal("检测到") + blockName + Component.literal("位于"));
+        player.sendSystemMessage(Component.literal("检测到" + blockName.getString() + "位于" + "(" +
                 blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"));
     }
 
@@ -76,7 +84,8 @@ public class Detector extends Item {
     public boolean isValuableBlock(Block block) {
 //        Block a = ModBlocks.NITER_ORE.get();
 //        System.out.println(block + " : " + ModBlocks.NITER_ORE);
-        return block == Blocks.CHEST || block == ModBlocks.BEAR_ORE.get() || block == ModBlocks.DEEPSLATE_BEAR_ORE.get() || block == ModBlocks.NITER_ORE.get() || block == ModBlocks.DEEPSLATE_NITER_ORE.get() || block == ModBlocks.BRIMSTONE.get();
+        return block == Blocks.ANCIENT_DEBRIS || block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE ||
+                block == Blocks.GOLD_ORE || block == Blocks.COAL_ORE || block == Blocks.EMERALD_ORE || block == Blocks.CHEST || block == ModBlocks.BEAR_ORE.get() || block == ModBlocks.DEEPSLATE_BEAR_ORE.get() || block == ModBlocks.NITER_ORE.get() || block == ModBlocks.DEEPSLATE_NITER_ORE.get() || block == ModBlocks.BRIMSTONE.get();
 /*        return block == Blocks.ANCIENT_DEBRIS || block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE ||
                 block == Blocks.GOLD_ORE || block == Blocks.COAL_ORE || block == Blocks.EMERALD_ORE || block == Blocks.CHEST || block == ModBlocks.BEAR_ORE.get() || block == ModBlocks.DEEPSLATE_BEAR_ORE.get();*/
 

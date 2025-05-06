@@ -137,7 +137,11 @@ public class Coin extends Item {
             MobEffect effect = effectInstance.getEffect();
 
             if (effectInstance.getAmplifier() > 0) {
-                effectDescription.append(" ").append(Component.translatable("potion.potency." + effectInstance.getAmplifier()));
+                if(effectInstance.getAmplifier() <= 5) {
+                    effectDescription.append(" ").append(Component.translatable("potion.potency." + effectInstance.getAmplifier()));
+                }else {
+                    effectDescription.append(" ").append(Component.translatable("enchantment.level." + (effectInstance.getAmplifier() + 1)));
+                }
             }
 
             if (effectInstance.getDuration() > 20) {
