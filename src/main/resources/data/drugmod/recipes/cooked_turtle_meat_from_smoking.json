@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "drugmod:turtle_meat"
+  },
+  "result": "drugmod:cooked_turtle_meat"
+}

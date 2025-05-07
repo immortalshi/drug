@@ -31,7 +31,7 @@ public class PestleItem extends SwordItem implements Vanishable {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                pTarget.addEffect(new MobEffectInstance(MobEffects.LUCK, 20 * 30));
+//                pTarget.addEffect(new MobEffectInstance(MobEffects.LUCK, 20 * 30));
                 mob.setNoAi(false);
             }
         }, 5000);

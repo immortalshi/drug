@@ -1,0 +1,10 @@
+{
+  "type": "drugmod:add_turtle_meat",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/turtle"
+    }
+  ],
+  "addition": "drugmod:turtle_meat"
+}
