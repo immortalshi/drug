@@ -5,6 +5,10 @@ import com.bird.drugmod.item.custom.BambooCoal;
 import com.bird.drugmod.item.custom.Coin;
 import com.bird.drugmod.item.custom.Detector;
 import com.bird.drugmod.item.custom.PestleItem;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tier;
@@ -85,6 +89,18 @@ public class ModItem {
     //竹炭
     public static final RegistryObject<Item> Bamboo_Coal = ITEMS.register("bamboo_coal",
             () -> new BambooCoal(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+
+    //海龟肉
+    public static final RegistryObject<Item> TURTLE_MEAT = ITEMS.register("turtle_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB).food(
+                    new FoodProperties.Builder().meat().nutrition(3).saturationMod(0.5f).effect(
+                            () -> new MobEffectInstance(MobEffects.HUNGER, 20 * 15, 1, true, false, true), 1.0F).build())));
+
+    //熟龟肉
+    public static final RegistryObject<Item> COOLED_TURTLE_MEAT = ITEMS.register("cooked_turtle_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB).food(
+                    new FoodProperties.Builder().meat().nutrition(9).saturationMod(1.0f).effect(
+                            () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 30, 1, true, false, true), 1.0F).build())));
 
     //注册
     public static void register(IEventBus eventBus) {

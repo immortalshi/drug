@@ -5,6 +5,7 @@ import com.bird.drugmod.block.entity.ModBlockEntities;
 import com.bird.drugmod.block.renderer.DryingRackRenderer;
 import com.bird.drugmod.enchantment.ModEnchantments;
 import com.bird.drugmod.item.ModItem;
+import com.bird.drugmod.loot.ModLootModifiers;
 import com.bird.drugmod.recipe.ModRecipes;
 import com.bird.drugmod.villager.ModVillagers;
 import com.bird.drugmod.world.feature.ModConfiguredFeatures;
@@ -72,6 +73,8 @@ public class DrugMod
 //        ModRecipes.register(modEventBus);
         ModRecipes.RECIPE_TYPES.register(modEventBus);
         ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
