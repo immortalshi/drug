@@ -1,10 +1,7 @@
 package com.bird.drugmod.item;
 
 import com.bird.drugmod.DrugMod;
-import com.bird.drugmod.item.custom.BambooCoal;
-import com.bird.drugmod.item.custom.Coin;
-import com.bird.drugmod.item.custom.Detector;
-import com.bird.drugmod.item.custom.PestleItem;
+import com.bird.drugmod.item.custom.*;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -80,7 +77,7 @@ public class ModItem {
 
     //熊熊球
     public static final RegistryObject<Item> BEAR_BALL = ITEMS.register("bear_ball",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
+            () -> new BearBall(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB)));
 
     //筛子
     public static final RegistryObject<Item> SIEVE = ITEMS.register("sieve",
@@ -100,14 +97,18 @@ public class ModItem {
     public static final RegistryObject<Item> COOLED_TURTLE_MEAT = ITEMS.register("cooked_turtle_meat",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB).food(
                     new FoodProperties.Builder().meat().nutrition(9).saturationMod(1.0f).effect(
-                            () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 30, 1, true, false, true), 1.0F).build())));
+                            () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 30, 1, true, false, true), 1.0F).effect(
+                            () -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20 * 15, 1, true, false, true), 1.0F).build())));
 
+    //海龟汤
     public static final RegistryObject<Item> TURTLE_SOUP = ITEMS.register("turtle_soup",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB).food(
                     new FoodProperties.Builder().meat().nutrition(16).saturationMod(1.0f).effect(
                             () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 60, 2, true, false, true), 1.0F).effect(
-                                    () -> new MobEffectInstance(MobEffects.NIGHT_VISION, 20 * 60, 0, true, false, true), 1.0F).effect(
-                            () -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 60, 0, true, false, true), 1.0F).build())));
+                            () -> new MobEffectInstance(MobEffects.NIGHT_VISION, 20 * 60, 0, true, false, true), 1.0F).effect(
+                            () -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 60, 0, true, false, true), 1.0F).effect(
+                            () -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20 * 30, 2, true, false, true), 1.0F).effect(
+                            () -> new MobEffectInstance(MobEffects.BAD_OMEN, 20 * 60, 0, true, false, true), 1.0F).build())));
 
     //注册
     public static void register(IEventBus eventBus) {
