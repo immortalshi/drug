@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:turtle_egg"
+    },
+    {
+      "item": "drugmod:cooked_turtle_meat"
+    }
+  ],
+  "result": {
+    "item": "drugmod:turtle_soup",
+    "count": 1
+  }
+}

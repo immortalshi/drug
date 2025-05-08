@@ -102,6 +102,13 @@ public class ModItem {
                     new FoodProperties.Builder().meat().nutrition(9).saturationMod(1.0f).effect(
                             () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 30, 1, true, false, true), 1.0F).build())));
 
+    public static final RegistryObject<Item> TURTLE_SOUP = ITEMS.register("turtle_soup",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DRUG_TAB).food(
+                    new FoodProperties.Builder().meat().nutrition(16).saturationMod(1.0f).effect(
+                            () -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 60, 2, true, false, true), 1.0F).effect(
+                                    () -> new MobEffectInstance(MobEffects.NIGHT_VISION, 20 * 60, 0, true, false, true), 1.0F).effect(
+                            () -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 60, 0, true, false, true), 1.0F).build())));
+
     //注册
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
