@@ -1,27 +1,32 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
       "item": "minecraft:bowl"
     },
-    {
+    "C": {
       "item": "minecraft:carrot"
     },
-    {
+    "S": {
       "item": "minecraft:sugar"
     },
-    {
+    "P": {
       "item": "minecraft:potato"
     },
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
+    "T":  {
       "item": "minecraft:turtle_egg"
     },
-    {
+    "D": {
+      "item": "minecraft:dried_kelp"
+    },
+    "M": {
       "item": "drugmod:cooked_turtle_meat"
     }
+  },
+  "pattern": [
+    "CSP",
+    "TDM",
+    " # "
   ],
   "result": {
     "item": "drugmod:turtle_soup",
